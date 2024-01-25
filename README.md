@@ -1,5 +1,3 @@
-
-##Info
 I've used JDK 21, Spring boot 3, Postgres, RabbitMq to resolve this task.
 I made two implementations of PhoneService, one works with postgres, the second stores everything in memory you can switch between them using storage.db flag in application.properties file.
 
