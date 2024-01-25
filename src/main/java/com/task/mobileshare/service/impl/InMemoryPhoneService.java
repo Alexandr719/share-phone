@@ -69,8 +69,8 @@ public class InMemoryPhoneService implements PhoneService {
             notificationSender.sendNotification(msg);
             return msg;
         } else {
-            logger.error("Phone {} not found or was booked by another tester", id);
-            throw new BookException("Phone not found or was booked by another tester");
+            logger.error("Booked phone {} not found or was booked by another tester", id);
+            throw new BookException("Booked phone not found or was booked by another tester");
         }
     }
 }

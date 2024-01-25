@@ -52,8 +52,8 @@ public class DataBasePhoneServiceImpl implements PhoneService {
         int count = phoneRepository.returnPhone(id, bookedBy);
 
         if (count == 0) {
-            logger.error("Phone {} not found or was booked by another tester", id);
-            throw new BookException("Phone not found or was booked by another tester");
+            logger.error("Booked phone {} not found or was booked by another tester", id);
+            throw new BookException("Booked phone not found or was booked by another tester");
         } else {
             String msg = "Phone " + id + " was returned by " + bookedBy;
             notificationSender.sendNotification(msg);
