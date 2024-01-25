@@ -19,7 +19,7 @@ http://localhost:8080/swagger-ui/index.html
 ## What aspect of this exercise did you find most interesting?
 The most interesting was to resolve race conditions.
 For ***InMemoryPhoneService*** I've used ConcurrentHashMap class to save all data. ConcurrentHashMap dividing complete hashtable array into segments or portions and allowing parallel access to those segments. I've found this really useful.
-For ***DataBasePhoneServiceImpl*** @Transactional annotation in repository class. This helps to prevent race conditions because the database operations (checking availability and updating the phone's status) are executed atomically. If two users try to book the same phone simultaneously, the database transaction ensures that only one of them will be able to successfully complete the booking operation.
+For ***DataBasePhoneServiceImpl*** I've used @Transactional annotation in repository class. This helps to prevent race conditions because the database operations (checking availability and updating the phone's status) are executed atomically. If two users try to book the same phone simultaneously, the database transaction ensures that only one of them will be able to successfully complete the booking operation.
 
 ## What did you find most cumbersome?
 The task has several solutions, it was difficult to choose which of these solutions to implement.
