@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="alexandr" id="2024-01-25-insert-phones-to-table">
+
+        <insert tableName="PHONES">
+            <column name="NAME" value="Samsung Galaxy S9"/>
+        </insert>
+
+        <insert tableName="PHONES">
+            <column name="NAME" value="Samsung Galaxy S8"/>
+        </insert>
+        <insert tableName="PHONES">
+            <column name="NAME" value="Samsung Galaxy S8"/>
+        </insert>
+        <insert tableName="PHONES">
+            <column name="NAME" value="Motorola Nexus 6"/>
+        </insert>
+        <insert tableName="PHONES">
+            <column name="NAME" value="Oneplus 9"/>
+        </insert>
+        <insert tableName="PHONES">
+            <column name="NAME" value="Apple iPhone 13"/>
+        </insert>
+        <insert tableName="PHONES">
+            <column name="NAME" value="Apple iPhone 12"/>
+        </insert>
+        <insert tableName="PHONES">
+            <column name="NAME" value="Apple iPhone 11"/>
+        </insert>
+        <insert tableName="PHONES">
+            <column name="NAME" value="iPhone X"/>
+        </insert>
+        <insert tableName="PHONES">
+            <column name="NAME" value="Nokia 3310"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

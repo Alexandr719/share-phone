@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="alexandr" id="2024-01-25-create-phone-table">
+
+        <sql>
+            CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+        </sql>
+
+        <createTable remarks="Phones for share" tableName="PHONES">
+            <column name="ID" type="UUID" defaultValueComputed="uuid_generate_v4()">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="NAME" type="varchar(512)" remarks="Phone name"/>
+            <column name="AVAILABLE" type="boolean" remarks="Phone status" defaultValue="true"/>
+            <column name="BOOKED_TIME" type="timestamp" remarks="When phone was booked"/>
+            <column name="BOOKED_BY" type="varchar(128)" remarks="Who booked phone"/>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>
