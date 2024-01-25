@@ -8,7 +8,6 @@ import java.util.UUID;
 
 public class PhoneBuilder {
 
-
     private PhoneBuilder(){
     }
 
